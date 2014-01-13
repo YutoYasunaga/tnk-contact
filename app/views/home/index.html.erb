@@ -1,1 +1,44 @@
-<h3>お問い合わせフォーム</h3>
+<div class="alert alert-gray">お問い合わせフォーム</div>
+<div class="alert alert-danger"><span class="text-small">弊社からのお客様の携帯メールあての返事が届かないことがありますので、メールアドレスはできるだけ携帯メール以外のアドバイスを入力してください。</span></div>
+<%= form_for :post do |f| %>
+  <% i = 50 %>
+  <table width="100%" cellpadding="5">
+    <tr>
+      <td width="230px"><%= f.label :"お名前" %></td>
+      <td><%= f.text_field :name, size: i %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :"メールアドレス" %></td>
+      <td><%= f.text_field :email, size: i %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :"メールアドレス（確認用）" %></td>
+      <td><%= f.text_field :email_confirmation, size: i %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :"滞在都市（複数選択可）" %></td>
+      <td>
+        <%= f.check_box :hochiminh %> <%= f.label :"ホーチミン" %> &nbsp;
+        <%= f.check_box :hanoi %>     <%= f.label :"ハノイ" %> &nbsp;
+        <%= f.check_box :hue %>       <%= f.label :"フエ" %> &nbsp;
+        <%= f.check_box :hoian %>     <%= f.label :"ホイアン" %> &nbsp;
+        <%= f.check_box :nhatrang %>  <%= f.label :"ニャチャン" %>
+        <br/>
+        <%= f.check_box :muine %>     <%= f.label :"ムイネー" %> &nbsp;
+        <%= f.check_box :other %>     <%= f.label :"その他" %> &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td><%= f.label :"お問い合わせ内容" %></td>
+      <td><%= f.text_area :content, size: "#{i+3}x7" %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= f.label :"再度内容をご確認の上、送信ボタンを押してください。" %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="right"><%= f.submit :"送信する", class: "btn btn-success", style: "width: 200px" %></td>
+    </tr>
+  </table>
+<% end %>

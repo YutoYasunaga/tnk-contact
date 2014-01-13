@@ -11,3 +11,37 @@
  *= require_self
  *= require_tree .
  */
+
+body
+{
+  width: 700px !important;
+  margin: auto !important;
+  padding: 10px !important;
+  font-size: 18px !important;
+}
+
+.alert-gray
+{
+  @extend alert;
+  font-weight: bold;
+  color: #000000;
+  background-color: #DCDCDC;
+  border-color: #DCDCDC;
+}
+
+.text-small
+{
+  color: black;
+  font-size: 0.8em;
+}
+
+
+label
+{
+  font-weight: normal !important;
+}
+
+.right-position
+{
+  text-align: right;
+}
