@@ -23,7 +23,6 @@ body
 .alert-gray
 {
   @extend alert;
-  font-weight: bold;
   color: #000000;
   background-color: #DCDCDC;
   border-color: #DCDCDC;
@@ -31,10 +30,15 @@ body
 
 .text-small
 {
-  color: black;
+  color: #000000;
   font-size: 0.8em;
 }
 
+th
+{
+  text-align: center !important;
+  font-weight: normal !important;
+}
 
 label
 {

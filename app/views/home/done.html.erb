@@ -1,0 +1,34 @@
+<div class="alert alert-gray"><b>お問い合わせフォーム</b></div>
+<div class="alert alert-success">
+  <span class="text-small">
+    お問い合わせありがとうございました。<br/>
+    下記内容でメールを返事しました。<br/>
+    ２日以外に返事を送りします。<br/>
+    返事がない場合メールが届いていない可能性がありますのでお手数ですが再度お問い合わせください。
+  </span>
+</div>
+<div class="alert alert-gray">
+  <table>
+    <tr>
+      <td style="min-width: 200px"></td>
+      <td>-----送信内容-----</td>
+    </tr>
+    <tr>
+      <th>お名前:</th>
+      <td><%= @contact.name %></td>
+    </tr>
+    <tr>
+      <th>メールアドレス:</th>
+      <td><%= @contact.email %></td>
+    </tr>
+    <tr>
+      <th>滞在都市:</th>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th>お問い合わせ内容:</th>
+      <td><%= @contact.description %></td>
+    </tr>
+  </table>
+</div>
