@@ -1,10 +1,16 @@
 class CreateCities < ActiveRecord::Migration
-  def change
+
+  def up
     create_table :cities do |t|
       t.string :name
-      t.belongs_to :contact
+      t.string :branch_id
 
       t.timestamps
     end
   end
+
+  def down
+    drop_table :cities
+  end
+
 end

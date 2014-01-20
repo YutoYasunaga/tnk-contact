@@ -1,12 +1,14 @@
 <div class="alert alert-gray"><b>お問い合わせフォーム</b></div>
+
 <div class="alert alert-success">
-  <span class="text-small">
+  <span class="text-note">
     お問い合わせありがとうございました。<br/>
     下記内容でメールを返事しました。<br/>
     ２日以外に返事を送りします。<br/>
     返事がない場合メールが届いていない可能性がありますのでお手数ですが再度お問い合わせください。
   </span>
 </div>
+
 <div class="alert alert-gray">
   <table>
     <tr>
@@ -24,6 +26,31 @@
     <tr>
       <th>滞在都市:</th>
       <td>
+        <% @contact.city_ids.each do |c| %>
+          <% if c == "1" %>
+            ホーチミン
+          <% elsif c == "2" %>
+            <% if @contact.city_ids.first != c %>、
+            <% end %>
+            ハノイ
+          <% elsif c == "3" %>
+            <% if @contact.city_ids.first != c %>、
+            <% end %>
+            フエ
+          <% elsif c == "5" %>
+            <% if @contact.city_ids.first != c %>、
+            <% end %>
+            ホイアン
+          <% elsif c == "7" %>
+            <% if @contact.city_ids.first != c %>、
+            <% end %>
+            ニャチャン
+          <% elsif c == "6" %>
+            <% if @contact.city_ids.first != c %>、
+            <% end %>
+            ムイネー
+          <% end %>
+        <% end %>
       </td>
     </tr>
     <tr>

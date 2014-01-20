@@ -1,3 +1,3 @@
 class Branch < ActiveRecord::Base
-  belongs_to :city
+  has_many :cities
 end

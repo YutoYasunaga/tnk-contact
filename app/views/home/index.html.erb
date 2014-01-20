@@ -1,6 +1,7 @@
-<%= City.first %>
 <div class="alert alert-gray"><b>お問い合わせフォーム</b></div>
-<div class="alert alert-danger"><span class="text-small">弊社からのお客様の携帯メールあての返事が届かないことがありますので、メールアドレスはできるだけ携帯メール以外のアドバイスを入力してください。</span></div>
+
+<div class="alert alert-danger"><span class="text-note">弊社からのお客様の携帯メールあての返事が届かないことがありますので、メールアドレスはできるだけ携帯メール以外のアドバイスを入力してください。</span></div>
+
 <%= form_for @contact do |f| %>
   <% i = 50 %>
   <table width="100%" cellpadding="5">
@@ -14,18 +15,19 @@
     </tr>
     <tr>
       <td><%= f.label :"メールアドレス（確認用）" %></td>
+      <td><%= f.text_field :email_confirmation, size: i %></td>
     </tr>
     <tr>
       <td><%= f.label :"滞在都市（複数選択可）" %></td>
       <td>
-        <%= f.check_box :city_ids, {multiple: true}, 1, nil %> <%= f.label :"ホーチミン" %> &nbsp;
-        <%= f.check_box :city_ids, {multiple: true}, 2, nil %> <%= f.label :"ハノイ" %> &nbsp;
-        <%= f.check_box :city_ids, {multiple: true}, 3, nil %> <%= f.label :"フエ" %> &nbsp;
-        <%= f.check_box :city_ids, {multiple: true}, 4, nil %> <%= f.label :"ホイアン" %> &nbsp;
-        <%= f.check_box :city_ids, {multiple: true}, 5, nil %> <%= f.label :"ニャチャン" %>
+        <%= f.check_box :city_ids, {multiple: true}, "1", nil %> <%= f.label :"ホーチミン" %> &nbsp;
+        <%= f.check_box :city_ids, {multiple: true}, "2", nil %> <%= f.label :"ハノイ" %> &nbsp;
+        <%= f.check_box :city_ids, {multiple: true}, "3", nil %> <%= f.label :"フエ" %> &nbsp;
+        <%= f.check_box :city_ids, {multiple: true}, "5", nil %> <%= f.label :"ホイアン" %> &nbsp;
+        <%= f.check_box :city_ids, {multiple: true}, "7", nil %> <%= f.label :"ニャチャン" %>
         <br/>
-        <%= f.check_box :city_ids, {multiple: true}, 6, nil %> <%= f.label :"ムイネー" %> &nbsp;
-        <%= f.check_box :city_ids, {multiple: true}, 7, nil %> <%= f.label :"その他" %> &nbsp;
+        <%= f.check_box :city_ids, {multiple: true}, "6", nil %> <%= f.label :"ムイネー" %> &nbsp;
+        <%= f.check_box :city_ids, {multiple: true}, "11", nil %> <%= f.label :"その他" %> &nbsp;
       </td>
     </tr>
     <tr>

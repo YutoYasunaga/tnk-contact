@@ -1,4 +1,3 @@
 class City < ActiveRecord::Base
-  has_one :branch
-  belongs_to :contact
+  belongs_to :branch
 end

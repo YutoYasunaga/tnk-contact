@@ -1,3 +1,4 @@
 class Contact < ActiveRecord::Base
-  has_many :cities
+  validates :email, confirmation: true
+  serialize :city_ids
 end
