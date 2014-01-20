@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140118082254) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
-    t.integer  "branch_id"
+    t.string   "branch_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
