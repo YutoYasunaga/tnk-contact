@@ -1,7 +1,10 @@
 TnkContact::Application.configure do
   config.action_mailer.smtp_settings = {
     :address => "smtp.mandrillapp.com",
-    :port => 25,
+    :port => 587,
+    :enable_starttls_auto => true,
+    :authentication => "plain",
+    :domain => "heroku.com",
     :user_name => "yuto.yasunaga@gmail.com",
     :password => "s82SlRM5dPiKL8vjrJfj4w"
   }
