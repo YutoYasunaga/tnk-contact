@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @contact = Contact.new
+    ContactMailer.welcome.deliver
   end
 
   def done
