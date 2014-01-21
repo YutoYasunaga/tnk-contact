@@ -1,12 +1,9 @@
 TnkContact::Application.configure do
-  config.action_mailer.smtp_setting = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "example.com",
-    authenticaton: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["morumotto26@gmail.com"],
-    password: ENV["shiroinezumi"]
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.mandrillapp.com",
+    :port => 25,
+    :user_name => "yuto.yasunaga@gmail.com",
+    :password => "s82SlRM5dPiKL8vjrJfj4w"
   }
   # Settings specified here will take precedence over those in config/application.rb.
 

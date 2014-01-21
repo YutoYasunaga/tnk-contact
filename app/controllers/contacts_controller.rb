@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     @contact.save
+    ContactMailer.welcome
     redirect_to controller: "home", action: "done"
   end
 
