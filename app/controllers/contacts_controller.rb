@@ -5,10 +5,8 @@ class ContactsController < ApplicationController
     @contact.city_ids.each do |c|
       @city = City.where("id = ?", c).take
       @branch = Branch.where("id = ?", @city.branch_id).take
-      @text = String.new
-      @text = @text.concat(@branch.email)
     end
-    ContactMailer.test_mail(@text)
+    ContactMailer.send_mail("morumotto26@gmail.com")
     redirect_to controller: "home", action: "done"
   end
 
