@@ -1,8 +1,8 @@
 class ContactMailer < ActionMailer::Base
-  default from: "Admin@example.com"
+  default from: "auto@tnkjapan.com"
   def send_mail(recipient)
     @recipient = recipient
     @sender = Contact.last
-    mail(to: @recipient, subject: "Test mail")
+    mail(to: @recipient, subject: "#{@sender.name}")
   end
 end
