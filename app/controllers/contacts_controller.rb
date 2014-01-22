@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       ContactMailer.send_mail("info@tnkjapan.com").deliver
       redirect_to controller: "home", action: "done"
     else
-      redirect_to root_path
+      render "home/index"
     end
   end
 

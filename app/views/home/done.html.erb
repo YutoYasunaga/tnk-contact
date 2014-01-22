@@ -55,7 +55,7 @@
     </tr>
     <tr>
       <th>お問い合わせ内容:</th>
-      <td><%= @contact.description %></td>
+      <td><%= @contact.description.gsub(/\n/, "<br/>").html_safe %></td>
     </tr>
   </table>
 </div>
