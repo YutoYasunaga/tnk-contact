@@ -1,9 +1,8 @@
 class ContactMailer < ActionMailer::Base
   default from: "auto@tnkjapan.com"
-  def send_mail(recipient, content)
-    @content = content
+  def send_mail(recipient)
     @recipient = recipient
     @sender = Contact.last
-    mail(to: @recipient, subject: "#{@sender.name}", body: @content)
+    mail(to: @recipient, subject: "#{@sender.name}")
   end
 end
