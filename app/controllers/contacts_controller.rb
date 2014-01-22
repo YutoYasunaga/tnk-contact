@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
       @city = City.where("id = ?", c).take
       @branch = Branch.where("id = ?", @city.branch_id).take
     end
-    ContactMailer.send_mail("morumotto26@gmail.com")
+    ContactMailer.send_mail("morumotto26@gmail.com").deliver
     redirect_to controller: "home", action: "done"
   end
 
