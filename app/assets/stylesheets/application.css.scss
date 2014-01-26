@@ -12,6 +12,11 @@
  *= require_tree .
  */
 
+.field_with_errors
+{
+  display: inline;
+}
+
 body
 {
   width: 700px !important;
@@ -48,6 +53,5 @@ th
 
 label
 {
-  display: inline;
   font-weight: normal !important;
 }
