@@ -27,7 +27,7 @@ class Contact < ActiveRecord::Base
 
   def validate_description
     unless description.presence
-     errors.add(:description, "内容を入力してください")
+      errors.add(:description, "内容を入力してください")
     end
   end
 end

@@ -9,11 +9,9 @@
       <td width="230px"><%= f.label :"お名前" %></td>
       <td>
         <%= f.text_field :name, size: i %>
-        <% if @contact.errors[:name].any? %>
-          <span class="error-explain">
-            <%= @contact.errors[:name].first %>
-          </span>
-        <% end %>
+        <span class="error-explain">
+          <%= @contact.errors[:name].first %>
+        </span>
       </td>
     </tr>
     <tr>
@@ -24,11 +22,9 @@
       <td><%= f.label :"メールアドレス（確認用）" %></td>
       <td>
         <%= f.text_field :email_confirmation, size: i %>
-        <% if @contact.errors[:email].any? %>
-          <span class="error-explain">
-            <%= @contact.errors[:email].first %>
-          </span>
-        <% end %>
+        <span class="error-explain">
+          <%= @contact.errors[:email].first %>
+        </span>
       </td>
     </tr>
     <tr>
@@ -43,22 +39,18 @@
         <%= f.check_box :city_ids, {multiple: true}, "6", nil %> <%= f.label :"ムイネー" %> &nbsp;
         <%= f.check_box :city_ids, {multiple: true}, "11", nil %> <%= f.label :"その他" %> &nbsp;
         <br/>
-        <% if @contact.errors[:city_ids].any? %>
-          <span class="error-explain">
-            <%= @contact.errors[:city_ids].first %>
-          </span>
-        <% end %>
+        <span class="error-explain">
+          <%= @contact.errors[:city_ids].first %>
+        </span>
       </td>
     </tr>
     <tr>
       <td><%= f.label :"お問い合わせ内容" %></td>
       <td>
         <%= f.text_area :description, size: "#{i+3}x7" %>
-        <% if @contact.errors[:description].any? %>
-          <span class="error-explain">
-            <%= @contact.errors[:description].first %>
-          </span>
-        <% end %>
+        <span class="error-explain">
+          <%= @contact.errors[:description].first %>
+        </span>
       </td>
     </tr>
     <tr>
