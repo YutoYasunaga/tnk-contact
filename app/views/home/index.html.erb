@@ -10,7 +10,10 @@
       <td>
         <%= f.text_field :name, size: i %>
         <span class="error-explain">
-          <%= @contact.errors[:name].first %>
+          <% @contact.errors[:name].each do |e| %>
+            <%= e %>
+            <br/>
+          <% end %>
         </span>
       </td>
     </tr>
@@ -23,7 +26,10 @@
       <td>
         <%= f.text_field :email_confirmation, size: i %>
         <span class="error-explain">
-          <%= @contact.errors[:email].first %>
+          <% @contact.errors[:email].each do |e| %>
+            <%= e %>
+            <br/>
+          <% end %>
         </span>
       </td>
     </tr>
@@ -40,7 +46,10 @@
         <%= f.check_box :city_ids, {multiple: true}, "11", nil %> <%= f.label :"その他" %> &nbsp;
         <br/>
         <span class="error-explain">
-          <%= @contact.errors[:city_ids].first %>
+          <% @contact.errors[:city_ids].each do |e| %>
+            <%= e %>
+            <br/>
+          <% end %>
         </span>
       </td>
     </tr>
@@ -49,7 +58,10 @@
       <td>
         <%= f.text_area :description, size: "#{i+3}x7" %>
         <span class="error-explain">
-          <%= @contact.errors[:description].first %>
+          <% @contact.errors[:description].each do |e| %>
+            <%= e %>
+            <br/>
+          <% end %>
         </span>
       </td>
     </tr>
